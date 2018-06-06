@@ -1,7 +1,8 @@
 <template>
   <section class="section">
     <div class="container">
-      <h1>Homepage</h1>
+      <h1>Read the Map</h1>
+      This is our awesome literary map app
     </div>
   </section>
 </template>
