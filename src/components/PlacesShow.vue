@@ -6,7 +6,7 @@
   <section class="section">
     <div class="container">
       <h1 class="title is-2">{{ place.name }}</h1>
-      <h2 class="subtitle is-5">{{ venue.address }}</h2>
+      <h2 class="subtitle is-5">{{ place.address }}</h2>
       <div class="columns">
         <div class="column">
           <img v-bind:src="place.image" v-bind:alt="place.name" />
@@ -43,7 +43,7 @@ export default {
   mounted() {
     axios
       .get(`/api/places/${this.$route.params.id}`)
-      .then(res => this.venue = res.data);
+      .then(res => this.place = res.data);
   },
   methods: {
     handleDelete() {
