@@ -42,5 +42,9 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "main": "index.js",
+  "repository": "git@github.com:Petemab/vue.js_hackathon.git",
+  "author": "Petemab <peteben18@hotmail.com>",
+  "license": "MIT"
 }
