@@ -1,1 +1,64 @@
 @import '~bulma/bulma';
+
+
+
+html{
+  background: url('../images/CTWK6N.jpg') no-repeat  center fixed;
+  background-size: cover;
+  font-family: 'Playfair Display', serif;
+}
+
+.navbar{
+  background-color: rgb(223, 221, 216);
+  border-bottom: solid black 5px;
+}
+
+.navbar-end{
+  font-family: 'Playfair Display', serif;
+}
+
+a.navbar-item{
+color: black;
+}
+
+.homeP{
+  font-family: 'Playfair Display', serif;
+  color: black;
+  font-size: 15;
+}
+
+.titleHome{
+  font-family: 'Playfair Display', serif;
+  color: black;
+  font-weight: 800;
+  font-size: 50px;
+}
+
+.subtitleHome{
+  font-family: 'Playfair Display', serif;
+  color: black;
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.homePic{
+  background-image: url('../images/dickens_face.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 600px;
+  border: black solid 5px;
+  border-radius: 10px;
+}
+
+.twistPic{
+  background-image: url('../images/oliver_twist.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+  border: black solid 5px;
+  border-radius: 10px;
+}
+
+.homeWords{
+  margin-bottom: 100px;
+}

@@ -10,7 +10,57 @@ export default {
   mounted() {
     this.map = new google.maps.Map(this.$el, {
       center: this.center || { lat: 51.515, lng: -0.078 },
-      zoom: 14
+      zoom: 14,
+      styles: [
+    {
+        "featureType": "all",
+        "elementType": "all",
+        "stylers": [
+            {
+                "hue": "#ffaa00"
+            },
+            {
+                "saturation": "-33"
+            },
+            {
+                "lightness": "10"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.land_parcel",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#fe8f00"
+            },
+            {
+                "weight": "1.59"
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "visibility": "simplified"
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "on"
+            }
+        ]
+    }
+]
     });
     this.infoWindow = new google.maps.InfoWindow();
   },

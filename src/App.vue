@@ -16,7 +16,9 @@
         </div>
       </div>
     </nav>
-    <router-view></router-view>
+    <div class="mainView">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
@@ -44,5 +46,8 @@ export default {
 body, html {
   padding: 0;
   margin: 0;
+
 }
+
+
 </style>

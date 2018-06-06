@@ -57,3 +57,10 @@ export default {
   }
 };
 </script>
+
+
+<style scoped>
+.map {
+  height: 250px;
+}
+</style>
