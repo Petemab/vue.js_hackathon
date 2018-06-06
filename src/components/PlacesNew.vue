@@ -1,7 +1,13 @@
 <template>
   <section class="section">
     <div class="container">
-      <form v-on:submit.prevent="handleSubmit()">
+      <form v-on:submit.prevent="handleSubmit()">\
+        <div class="field">
+          <label class="label">Book</label>
+          <div class="control">
+            <input class="input" type="text" name="book" placeholder="Text book" v-model="place.book">
+          </div>
+        </div>
         <div class="field">
           <label class="label">Name</label>
           <div class="control">

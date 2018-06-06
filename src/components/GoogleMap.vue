@@ -28,6 +28,7 @@ export default {
             <a href="/#/places/${place._id}">
               <h3>${place.name}</h3>
               <p>${place.address}</p>
+              <p>Featured in: ${place.book}</p>
             </a>
           `);
           this.infoWindow.open(this.map, marker);

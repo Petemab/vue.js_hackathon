@@ -4,11 +4,13 @@ const placeSchema = new mongoose.Schema({
   name: String,
   address: String,
   description: String,
+  book: String,
+  image: String,
   location: {
     lat: Number,
     lng: Number
   },
-  image: String
+  extract: String
 });
 
 module.exports = mongoose.model('Place', placeSchema);

@@ -1,8 +1,8 @@
 <template>
   <section class="section">
     <div class="container">
-      <h1>Read the Map</h1>
-      This is our awesome literary map app
+      <h1>Charles Dicken's London</h1>
+      Explore the city brought to life by the great Victorian wordsmith.
     </div>
   </section>
 </template>
