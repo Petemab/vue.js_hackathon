@@ -1,35 +1,17 @@
 <template>
   <section class="section">
     <div class="container">
-      <form v-on:submit.prevent="handleSubmit()">\
+      <form v-on:submit.prevent="handleSubmit()">
         <div class="field">
           <label class="label">Book</label>
           <div class="control">
-            <input class="input" type="text" name="book" placeholder="Text book" v-model="place.book">
-          </div>
-        </div>
-        <div class="field">
-          <label class="label">Name</label>
-          <div class="control">
-            <input class="input" type="text" name="name" placeholder="Text name" v-model="place.name">
+            <input class="input" type="text" name="book" placeholder="book title" v-model="place.book">
           </div>
         </div>
         <div class="field">
           <label class="label">Address</label>
           <div class="control">
             <Autocomplete name="address" v-bind:handle-place-change="handlePlaceChange"/>
-          </div>
-        </div>
-        <div class="field">
-          <label class="label">Description</label>
-          <div class="control">
-            <input class="input" type="text" name="description" placeholder="Text description" v-model="place.description">
-          </div>
-        </div>
-        <div class="field">
-          <label class="label">Image</label>
-          <div class="control">
-            <input class="input" type="text" name="image" placeholder="Text image" v-model="place.image">
           </div>
         </div>
         <div class="control">
@@ -56,9 +38,12 @@ export default {
         .post('/api/places', this.place)
         .then(() => this.$router.push('/places'));
     },
-    handlePlaceChange({ formatted_address: address, geometry: { location } }) {
+    handlePlaceChange({ name: name, formatted_address: address, geometry: { location }, photos: image }) {
+      this.place.name = name;
       this.place.address = address;
       this.place.location = location.toJSON();
+      this.place.image = image[0].getUrl({'maxWidth': 1000, 'maxHeight': 1000})
+      console.log(image[0].getUrl({'maxWidth': 1000, 'maxHeight': 1000}))
     }
   },
   components: {
