@@ -8,14 +8,11 @@ Vue.config.productionTip = false;
 
 Vue.use(VueRouter);
 import Home from './components/Home';
-import PlacesIndex from './components/PlacesIndex';
-import PlacesNew from './components/PlacesNew';
+
 
 
 const routes = [
-  { path: '/' , component: Home },
-  { path: '/places' , component: PlacesIndex },
-  { path: '/places/new' , component: PlacesNew }
+  { path: '/' , component: Home }
 
 ];
 
