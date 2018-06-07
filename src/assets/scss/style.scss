@@ -20,40 +20,41 @@ a.navbar-item{
 color: black;
 }
 
+.navbar-item{
+  font-family: 'Playfair Display', serif;
+  color: black;
+  font-weight: 800;
+}
+
 .homeP{
   font-family: 'Playfair Display', serif;
   color: black;
-  font-size: 15;
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: 1px 1px white;
 }
 
 .titleHome{
   font-family: 'Playfair Display', serif;
   color: black;
   font-weight: 800;
-  font-size: 50px;
+  font-size: 60px;
+  text-shadow: 1px 1px white;
 }
 
 .subtitleHome{
   font-family: 'Playfair Display', serif;
   color: black;
   font-weight: 600;
-  font-size: 25px;
+  font-size: 40px;
+  text-shadow: 1px 1px white;
 }
 
 .homePic{
   background-image: url('../images/dickens_face.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  height: 600px;
-  border: black solid 5px;
-  border-radius: 10px;
-}
-
-.twistPic{
-  background-image: url('../images/oliver_twist.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 200px;
+  height: 250px;
   border: black solid 5px;
   border-radius: 10px;
 }
