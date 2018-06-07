@@ -5,8 +5,8 @@ html{
   background: url('../images/CTWK6N.jpg') no-repeat  center fixed;
   background-size: cover;
   font-family: 'Playfair Display', serif;
-
 }
+
 
 h1,h2,h3,p{
   font-family: 'Playfair Display', serif;
@@ -37,7 +37,35 @@ color: black;
   font-size: 30px;
   font-weight: bold;
   text-shadow: 1px 1px white;
+  -webkit-animation: fade-in-fwd 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 2.5s both;
+  	        animation: fade-in-fwd 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 2.5s both;
 }
+
+@-webkit-keyframes fade-in-fwd {
+  0% {
+    -webkit-transform: translateZ(-80px);
+            transform: translateZ(-80px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-fwd {
+  0% {
+    -webkit-transform: translateZ(-80px);
+            transform: translateZ(-80px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
 
 .titleHome{
   font-family: 'Playfair Display', serif;
@@ -45,6 +73,33 @@ color: black;
   font-weight: 800;
   font-size: 60px;
   text-shadow: 1px 1px white;
+  -webkit-animation: text-shadow-pop-tl 1.5s both;
+	        animation: text-shadow-pop-tl 1.5s both;
+}
+
+@-webkit-keyframes text-shadow-pop-tl {
+  0% {
+    text-shadow: 0 0 #DFD8D8, 0 0 #DFD8D8, 0 0 #DFD8D8, 0 0 #DFD8D8, 0 0 #DFD8D8, 0 0 #DFD8D8, 0 0 #DFD8D8, 0 0 #DFD8D8;
+    -webkit-transform: translateX(0) translateY(0);
+            transform: translateX(0) translateY(0);
+  }
+  100% {
+    text-shadow: -1px -1px #DFD8D8, -2px -2px #DFD8D8, -3px -3px #DFD8D8, -4px -4px #DFD8D8, -5px -5px #DFD8D8, -6px -6px #DFD8D8, -7px -7px #DFD8D8, -8px -8px #DFD8D8;
+    -webkit-transform: translateX(8px) translateY(8px);
+            transform: translateX(8px) translateY(8px);
+  }
+}
+@keyframes text-shadow-pop-tl {
+  0% {
+    text-shadow: 0 0 #DFD8D8, 0 0 #DFD8D8, 0 0 #DFD8D8, 0 0 #DFD8D8, 0 0 #DFD8D8, 0 0 #DFD8D8, 0 0 #DFD8D8, 0 0 #DFD8D8;
+    -webkit-transform: translateX(0) translateY(0);
+            transform: translateX(0) translateY(0);
+  }
+  100% {
+    text-shadow: -1px -1px #DFD8D8, -2px -2px #DFD8D8, -3px -3px #DFD8D8, -4px -4px #DFD8D8, -5px -5px #DFD8D8, -6px -6px #DFD8D8, -7px -7px #DFD8D8, -8px -8px #DFD8D8;
+    -webkit-transform: translateX(8px) translateY(8px);
+            transform: translateX(8px) translateY(8px);
+  }
 }
 
 .subtitleHome{
@@ -53,7 +108,35 @@ color: black;
   font-weight: 600;
   font-size: 40px;
   text-shadow: 1px 1px white;
+  -webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1.5s both;
+        animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1.5s both;
 }
+
+@-webkit-keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 
 .homePic{
   background-image: url('../images/dickens_face.jpg');
@@ -62,6 +145,41 @@ color: black;
   height: 250px;
   border: black solid 5px;
   border-radius: 10px;
+  -webkit-animation: swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) 3s both;
+	        animation: swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) 3s both;
+}
+
+@-webkit-keyframes swing-in-top-fwd {
+  0% {
+    -webkit-transform: rotateX(-100deg);
+            transform: rotateX(-100deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 1;
+  }
+}
+@keyframes swing-in-top-fwd {
+  0% {
+    -webkit-transform: rotateX(-100deg);
+            transform: rotateX(-100deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 1;
+  }
 }
 
 .homeWords{
