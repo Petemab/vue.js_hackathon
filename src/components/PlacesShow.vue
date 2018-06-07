@@ -1,23 +1,30 @@
 
-
-
-// html goes here
 <template>
   <section class="section">
     <div class="container">
-      <h1 class="title is-2">{{ place.name }}</h1>
-      <h2 class="subtitle is-5">{{ place.address }}</h2>
-      <div class="columns">
+      <google-map v-bind:center="place.location" />
+
+      <div class="columns show-box">
         <div class="column">
-          <img v-bind:src="place.image" v-bind:alt="place.name" />
+          <h1 class="title is-2">{{ place.name }}</h1>
+          <h2 class="subtitle is-5">{{ place.address }}</h2>
+
           <div class="content">
-            <p>{{ place.description }}</p>
+            <p>{{ this.description }}</p>
+
           </div>
         </div>
         <div class="column">
-          <google-map v-bind:center="place.location" />
+        <img v-bind:src="place.image" v-bind:alt="place.name" />
+
         </div>
+
       </div>
+      <div class='literary'>
+        <h3 class="booky title is-3">{{place.book}}</h3>
+            <p>{{ this.synopsis }}</p>
+          <div class='extracted'></div>
+        </div>
         <router-link v-bind:to="editLink" class="button is-info" >Edit</router-link>
         <button v-on:click="handleDelete" class="button is-danger">Delete</button>
     </div>
@@ -32,7 +39,10 @@ export default {
   name: 'PlacesShow',
   data() {
     return {
-      place: {}
+      place: {},
+      extract: {},
+      synopsis: {},
+      description: {}
     };
   },
   computed: {
@@ -43,14 +53,54 @@ export default {
   mounted() {
     axios
       .get(`/api/places/${this.$route.params.id}`)
-      .then(res => this.place = res.data);
+      .then(res => {
+        this.place = res.data;
+        var name = this.place.name;
+        var book = this.place.book;
+        this.handleDescription(name);
+        this.handleExtract(book);
+        this.handleSynopsis(book);
+      }
+      )
   },
   methods: {
     handleDelete() {
       axios
         .delete(`/api/places/${this.$route.params.id}`)
         .then(() => this.$router.push('/places'));
+    },
+
+    handleDescription(name) {
+      axios
+      .get(`https://en.wikipedia.org/api/rest_v1/page/summary/${name}`)
+      .then(res => {
+        // console.log(res.data.extract);
+        this.description = res.data.extract;
+      });
+    },
+
+
+
+    handleExtract(book) {
+      axios
+      .get(`http://extracts.panmacmillan.com/getextracts?titlecontains=${book}`)
+      .then(res => {
+        this.extract = res.data;
+        // console.log(this.extract.Extracts[0].extractHtml)
+        document.getElementsByClassName('extracted')[0].innerHTML = this.extract.Extracts[0].extractHtml
+      });
+    },
+
+    handleSynopsis(book) {
+      axios
+      .get(`https://en.wikipedia.org/api/rest_v1/page/summary/${book}`)
+      .then(res => {
+        // console.log(res.data.extract);
+        this.synopsis = res.data.extract;
+      });
     }
+
+
   },
   components: {
     GoogleMap
@@ -58,9 +108,9 @@ export default {
 };
 </script>
 
-
 <style scoped>
 .map {
   height: 250px;
+  margin-bottom: 50px;
 }
 </style>

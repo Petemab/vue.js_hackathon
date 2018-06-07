@@ -4,9 +4,9 @@
       <div class="columns">
         <div class="column is-half">
           <div class="homeWords has-text-centered">
-            <h1 class="titleHome">Charles Dickens' London</h1>
+            <h1 class="titleHome">Britain By The Book</h1>
             <hr/>
-            <h2 class="subtitleHome">Explore the city brought to life by the great Victorian wordsmith.</h2>
+            <h2 class="subtitleHome">Explore the UK city by city and page by page</h2>
             <p class="homeP">Click on Oliver Twist below to begin</p>
             <hr/>
           </div>

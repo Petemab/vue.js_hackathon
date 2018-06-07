@@ -10,7 +10,7 @@ export default {
   mounted() {
     this.map = new google.maps.Map(this.$el, {
       center: this.center || { lat: 51.515, lng: -0.078 },
-      zoom: 14,
+      zoom: 6,
       styles: [
     {
         "featureType": "all",
@@ -76,6 +76,7 @@ export default {
         marker.addListener('click', () => {
           this.infoWindow.setContent(`
             <a href="/#/places/${place._id}">
+            <img src=${place.image} class="icon" />
               <h3>${place.name}</h3>
               <p>${place.address}</p>
               <p>Featured in: ${place.book}</p>
