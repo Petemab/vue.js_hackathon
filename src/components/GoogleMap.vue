@@ -75,12 +75,14 @@ export default {
         });
         marker.addListener('click', () => {
           this.infoWindow.setContent(`
+            <div style='text-align:center'>
             <a href="/#/places/${place._id}">
-            <img src=${place.image} class="icon" />
-              <h3>${place.name}</h3>
-              <p>${place.address}</p>
-              <p>Featured in: ${place.book}</p>
+            <div style='background-image: url(${place.image})' class="icon" ></div>
+              <p class='title is-3'>${place.name}</p>
+              <p class='subtitle is-3'>Featured in: ${place.book.toUpperCase()}</p>
+              <p class='subtitle is-4'>${place.address}</p>
             </a>
+            </div>
           `);
           this.infoWindow.open(this.map, marker);
         });

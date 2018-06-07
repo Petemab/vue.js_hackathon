@@ -2,13 +2,13 @@ const mongoose = require('mongoose');
 
 const placeSchema = new mongoose.Schema({
   name: String,
-  address: String,
+  address: {type: String, required: true},
   description: String,
-  book: String,
+  book: {type: String, required: true},
   image: String,
   location: {
-    lat: Number,
-    lng: Number
+    lat: {type: Number, required: true},
+    lng: {type: Number, required: true}
   },
   extract: String
 });

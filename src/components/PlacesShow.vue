@@ -15,17 +15,19 @@
           </div>
         </div>
         <div class="column">
-        <img v-bind:src="place.image" v-bind:alt="place.name" />
+
+          <img v-bind:src="place.image" v-bind:alt="place.name" />
 
         </div>
 
       </div>
       <div class='literary'>
         <h3 class="booky title is-3">{{place.book}}</h3>
-            <p>{{ this.synopsis }}</p>
+        <p class='byline'></p>
+            <div class = 'synopsis'><p>{{ this.synopsis }}</p></div>
           <div class='extracted'></div>
         </div>
-        <router-link v-bind:to="editLink" class="button is-info" >Edit</router-link>
+        <!-- <router-link v-bind:to="editLink" class="button is-info" >Edit</router-link> -->
         <button v-on:click="handleDelete" class="button is-danger">Delete</button>
     </div>
   </section>
@@ -72,7 +74,7 @@ export default {
 
     handleDescription(name) {
       axios
-      .get(`https://en.wikipedia.org/api/rest_v1/page/summary/${name}`)
+      .get(`https://en.wikipedia.org/api/rest_v1/page/summary/${name.toLowerCase()}`)
       .then(res => {
         // console.log(res.data.extract);
         this.description = res.data.extract;
@@ -83,17 +85,19 @@ export default {
 
     handleExtract(book) {
       axios
-      .get(`http://extracts.panmacmillan.com/getextracts?titlecontains=${book}`)
+      .get(`http://extracts.panmacmillan.com/getextracts?titlecontains=${book.toLowerCase()}`)
       .then(res => {
         this.extract = res.data;
-        // console.log(this.extract.Extracts[0].extractHtml)
-        document.getElementsByClassName('extracted')[0].innerHTML = this.extract.Extracts[0].extractHtml
-      });
+        // console.log(this.extract.Extracts[0].extractHtml);
+        document.getElementsByClassName('extracted')[0].innerHTML = this.extract.Extracts[0].extractHtml;
+        document.getElementsByClassName('byline')[0].innerHTML = `by ${this.extract.Extracts[0].author}`;
+      })
+      .catch((err) => console.log(err));
     },
 
     handleSynopsis(book) {
       axios
-      .get(`https://en.wikipedia.org/api/rest_v1/page/summary/${book}`)
+      .get(`https://en.wikipedia.org/api/rest_v1/page/summary/${book.toLowerCase()}`)
       .then(res => {
         // console.log(res.data.extract);
         this.synopsis = res.data.extract;

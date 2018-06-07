@@ -63,14 +63,40 @@ color: black;
 }
 
 .icon {
-  width: 100px;
-  height: 100px;
+  width: 300px;
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.showpage {
+  width: 600px;
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
 }
 
 .booky {
   text-transform: uppercase;
   text-align: center;
   background-color: white;
+}
+
+.byline {
+  text-align: center;
+  margin-top: -20px;
+
+}
+
+.synopsis {
+  font-style: italic;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
 }
 
 .literary {
@@ -90,6 +116,12 @@ color: black;
     }
 }
 
+.fail {
+  text-align: center;
+  display: none;
+  z-index: 3;
+
+}
 .show-box {
   border: 2px solid black;
   border-radius: 10px;
