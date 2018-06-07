@@ -79,8 +79,8 @@ export default {
             <a href="/#/places/${place._id}">
             <div style='background-image: url(${place.image})' class="icon" ></div>
               <p class='title is-3'>${place.name}</p>
-              <p class='subtitle is-3'>Featured in: ${place.book.toUpperCase()}</p>
-              <p class='subtitle is-4'>${place.address}</p>
+              <p class='subtitle is-5'>Featured in: ${place.book.toUpperCase()}</p>
+              <p class='subtitle is-6'>${place.address}</p>
             </a>
             </div>
           `);
