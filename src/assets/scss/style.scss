@@ -154,6 +154,7 @@ color: black;
   right: -100%;
   top: -400px;
   animation-name: move;
+  animation-timing-function: linear;
   animation-duration: 20s;
   animation-delay: 0.01s;
   animation-iteration-count: infinite;
