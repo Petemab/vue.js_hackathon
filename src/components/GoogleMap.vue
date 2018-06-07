@@ -71,7 +71,9 @@ export default {
         this.bounds.extend(place.location);
         const marker = new google.maps.Marker({
           position: place.location,
-          map: this.map
+          map: this.map,
+          animation: google.maps.Animation.DROP
+
         });
         marker.addListener('click', () => {
           this.infoWindow.setContent(`
@@ -94,7 +96,7 @@ export default {
       this.marker = new google.maps.Marker({
         position: this.center,
         map: this.map,
-        label: '🤓'
+        animation: google.maps.Animation.DROP
       });
     }
   }

@@ -16,7 +16,7 @@
         </div>
         <div class="column">
 
-          <img v-bind:src="place.image" v-bind:alt="place.name" />
+          <img class='imageshow' v-bind:src="place.image" v-bind:alt="place.name" />
 
         </div>
 
