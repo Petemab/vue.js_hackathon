@@ -13,8 +13,7 @@
           <div class="columns">
             <div class="column is-one-third">
             </div>
-            <router-link tag="div" to="/places" class="homePic column is-one-third">
-            </router-link>>
+            <router-link tag="div" to="/places" class="homePic column is-one-third"></router-link>
             <div class="column is-one-third">
             </div>
           </div>
