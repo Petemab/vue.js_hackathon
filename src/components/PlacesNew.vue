@@ -1,7 +1,7 @@
 <template>
   <section class="section">
     <div class="container">
-      <div class='fail'><p>sorry, your entry was not sufficiently literary nor londony enough... please try again!</p></div>
+      <div class='fail'><p>sorry, something went wrong with your submission... please try again!</p></div>
       <form v-on:submit.prevent="handleSubmit()">
         <div class="field">
           <label class="label">Book</label>
