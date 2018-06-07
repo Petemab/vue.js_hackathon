@@ -1,6 +1,7 @@
 <template>
   <div>
     <google-map v-bind:places="places" />
+    <img class='whale' src='http://www.angelfire.com/home/lake/images/4whale3d.gif' />
   </div>
 </template>
 

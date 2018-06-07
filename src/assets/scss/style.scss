@@ -146,3 +146,27 @@ color: black;
 .imageshow {
   border-radius: 10px;
 }
+
+
+.whale {
+  width: 10%;
+  position: relative;
+  right: -100%;
+  top: -400px;
+  animation-name: move;
+  animation-duration: 20s;
+  animation-delay: 0.01s;
+  animation-iteration-count: infinite;
+}
+
+
+
+@keyframes move {
+0% {
+  left:-100%;
+ }
+
+100% {
+  left:100%;
+}
+}
