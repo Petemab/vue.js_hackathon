@@ -5,6 +5,11 @@ html{
   background: url('../images/CTWK6N.jpg') no-repeat  center fixed;
   background-size: cover;
   font-family: 'Playfair Display', serif;
+
+}
+
+h1,h2,h3,p{
+  font-family: 'Playfair Display', serif;
 }
 
 .navbar{
@@ -26,7 +31,7 @@ color: black;
   font-weight: 800;
 }
 
-.homeP{
+.homeP, .label{
   font-family: 'Playfair Display', serif;
   color: black;
   font-size: 30px;
@@ -127,4 +132,13 @@ color: black;
   border: 2px solid black;
   border-radius: 10px;
   background-color: white;
+}
+
+.button{
+  font-family: 'Playfair Display', serif;
+}
+
+.input{
+  border: 2px solid black;
+  border-radius: 10px;
 }

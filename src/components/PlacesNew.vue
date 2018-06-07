@@ -2,23 +2,43 @@
   <section class="section">
     <div class="container">
       <div class='fail'><p>sorry, something went wrong with your submission... please try again!</p></div>
-      <form v-on:submit.prevent="handleSubmit()">
-        <div class="field">
-          <label class="label">Book</label>
-          <div class="control">
-            <input class="input" type="text" name="book" placeholder="book title" v-model="place.book">
-          </div>
+      <div class="columns is-mulitline">
+        <div class="column is-one-third">
         </div>
-        <div class="field">
-          <label class="label">Place</label>
-          <div class="control">
-            <Autocomplete name="address" v-bind:handle-place-change="handlePlaceChange"/>
-          </div>
+        <div class="column is-one-third has-text-centered">
+          <div class='fail'><p>sorry, something went wrong with your submission... please try again!</p></div>
+          <h1 class="subtitleHome has-text-black">Add a Literary Place</h1>
         </div>
-        <div class="control">
-          <button class="button is-link">Submit</button>
+        <div class="column is-one-third">
         </div>
-      </form>
+      </div>
+      <div class="columns is-mulitline">
+        <div class="column is-one-third">
+        </div>
+        <div class="column is-one-third">
+
+          <form v-on:submit.prevent="handleSubmit()">
+            <div class="field">
+              <label class="label">Book</label>
+              <div class="control">
+                <input class="input" type="text" name="book" placeholder="book title" v-model="place.book">
+              </div>
+            </div>
+            <div class="field">
+              <label class="label">Place</label>
+              <div class="control">
+                <Autocomplete name="address" v-bind:handle-place-change="handlePlaceChange"/>
+              </div>
+            </div>
+            <div class="control">
+              <button class="button addButton is-dark">Submit</button>
+            </div>
+          </form>
+
+        </div>
+        <div class="column is-one-third">
+        </div>
+      </div>
     </div>
   </section>
 </template>
