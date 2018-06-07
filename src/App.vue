@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <nav class="navbar container" role="navigation" aria-label="main navigation">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <router-link to="/" class="navbar-item">BRITAIN BY THE BOOK</router-link>
         <a role="button" class="navbar-burger" v-bind:class="{ 'is-active': navIsOpen }" v-on:click="toggleNav()">
