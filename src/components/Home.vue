@@ -6,7 +6,7 @@
           <div class="homeWords has-text-centered">
             <h1 class="titleHome">Britain By The Book</h1>
             <hr/>
-            <h2 class="subtitleHome">Explore the UK city by city and page by page</h2>
+            <h2 class="subtitleHome">Explore the UK, city by city and page by page</h2>
             <p class="homeP">Click on Charles Dickens to begin</p>
             <hr/>
           </div>
