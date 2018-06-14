@@ -85,7 +85,7 @@ export default {
 
     handleExtract(book) {
       axios
-      .get(`http://extracts.panmacmillan.com/getextracts?titlecontains=${book.toLowerCase()}`)
+      .get(`https://extracts.panmacmillan.com/getextracts?titlecontains=${book.toLowerCase()}`)
       .then(res => {
         this.extract = res.data;
         // console.log(this.extract.Extracts[0].extractHtml);
