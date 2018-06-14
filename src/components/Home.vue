@@ -17,9 +17,8 @@
             <div class="column is-one-third">
             </div>
           </div>
-
+              <p class='credit'>Created by Pete Bennett and Stephanie Ye</p>
         </div>
-
       </div>
     </div>
   </section>
