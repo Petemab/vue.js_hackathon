@@ -1,4 +1,7 @@
 const express = require('express');
+const path = require('path');
+const serveStatic = require('serve-static');
+
 const app = express();
 const mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
@@ -10,7 +13,7 @@ const errorHandler = require('./lib/errorHandler');
 
 mongoose.connect(dbURI);
 
-
+app.use(serveStatic(__dirname + "/dist"));
 app.use(bodyParser.json());
 app.use('/api', router);
 
