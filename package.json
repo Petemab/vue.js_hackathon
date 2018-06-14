@@ -20,6 +20,7 @@
     "mongoose": "^5.0.17",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",
+    "serve-static": "^1.13.2",
     "vue": "^2.5.16",
     "vue-router": "^3.0.1",
     "webpack": "^4.11.1"
