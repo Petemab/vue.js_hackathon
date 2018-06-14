@@ -17,7 +17,7 @@ To create a new pin, the user enters a book title and a place name.
 
 Clicking on the pin brings the user to a page with information about both the place and the book:
 * The Google Maps API returns the place location and a photo of the place.
-* The Wikipedia API returns a short description of the place and a summary of the book.
+* The Wikipedia API returns a short description of the place and a note about the book.
 * The Pan Macmillan API returns a short excerpt (usually the first chapter) of the book.
 
 ![Show Page](src/assets/images/britainbythebook1.png)
@@ -35,7 +35,8 @@ Task Management
 ##Challenges
 -----------------
 * As it was a hackathon, we did not have time to fully comes to grips with Vue.js, and there are many features of the framework we have yet to explore and understand.
-* We also did not have time to fully research APIs and just went with what we could easily find. While we appreciate the Pan Macmillan API, using it obviously limits the books that can be added to titles published by that house. Fortunately, they do have a comprehensive range of the classics in their catalogue.
+* We also did not have time to fully research APIs and just went with what we could easily find. While we appreciate the Pan Macmillan API, using it obviously limits the books that can be added to titles published by that house (at least, if you want an excerpt!). Fortunately, they do have a comprehensive range of the classics in their catalogue.
+* The Wikipedia API is unfortunately also not comprehensive and does not offer all the entries in the Wikipedia database, so sometimes no place information or book information is returned.
 
 ##Technologies
 --------------
@@ -46,6 +47,9 @@ Languages:
 
 Front-end Web Application Framework:
 * Vue.js
+
+Server Environment
+* Node.js with Express.js
 
 CSS Framework:
 * Bulma
