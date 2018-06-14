@@ -10,13 +10,7 @@
             <p class="homeP">Click on Charles Dickens to begin</p>
             <hr/>
           </div>
-          <div class="columns">
-            <div class="column is-one-third">
-            </div>
-            <router-link tag="div" to="/places" class="homePic column is-one-third"></router-link>
-            <div class="column is-one-third">
-            </div>
-          </div>
+            <router-link tag="div" to="/places" class="homePic"></router-link>
               <p class='credit'>Created by Pete Bennett and Stephanie Ye</p>
         </div>
       </div>
