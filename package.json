@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "yarn build && node index.js",
+    "start": "node index.js",
     "start:client": "vue-cli-service serve --open",
     "start:server": "nodemon index",
     "seed": "node db/seeds",
