@@ -4,7 +4,7 @@ import VueRouter from 'vue-router';
 
 import './assets/scss/style.scss';
 
-Vue.config.productionTip = false;
+// Vue.config.productionTip = false;
 
 Vue.use(VueRouter);
 import Home from './components/Home';

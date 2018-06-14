@@ -8,7 +8,8 @@
     "start:server": "nodemon index",
     "seed": "node db/seeds",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "heroku-postbuild": "yarn install --only=dev --no-shrinkwrap && yarn build",
   },
   "dependencies": {
     "axios": "^0.18.0",
