@@ -41,8 +41,10 @@ export default {
 </script>
 
 <style scoped>
+
 .map {
-  height: calc(100vh - 52px);
+  height: 100vh;
+  margin-bottom: -500px;
 }
 
 

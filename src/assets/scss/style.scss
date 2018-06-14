@@ -1,5 +1,6 @@
 @import '~bulma/bulma';
 
+//skeleton
 
 html{
   background: url('../images/CTWK6N.jpg') no-repeat  center fixed;
@@ -7,10 +8,46 @@ html{
   font-family: 'Playfair Display', serif;
 }
 
+.literary {
+  border: 2px solid black;
+  margin-bottom: 30px;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: white;
+  margin-left: -10px;
+  margin-right: -10px;
+    p {
+      margin-bottom: 10px;
+    }
+    h4 {
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+}
 
-h1,h2,h3,p{
+.fail {
+  text-align: center;
+  display: none;
+  z-index: 3;
+
+}
+.show-box {
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.button{
   font-family: 'Playfair Display', serif;
 }
+
+.input{
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+
+//navbar
 
 .navbar{
   background-color: rgb(223, 221, 216);
@@ -31,39 +68,18 @@ color: black;
   font-weight: 800;
 }
 
+//typography
+
+h1,h2,h3,p{
+  font-family: 'Playfair Display', serif;
+}
+
 .homeP, .label{
   font-family: 'Playfair Display', serif;
   color: black;
   font-size: 30px;
   font-weight: bold;
   text-shadow: 1px 1px white;
-  -webkit-animation: fade-in-fwd 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 2.5s both;
-  	        animation: fade-in-fwd 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 2.5s both;
-}
-
-@-webkit-keyframes fade-in-fwd {
-  0% {
-    -webkit-transform: translateZ(-80px);
-            transform: translateZ(-80px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateZ(0);
-            transform: translateZ(0);
-    opacity: 1;
-  }
-}
-@keyframes fade-in-fwd {
-  0% {
-    -webkit-transform: translateZ(-80px);
-            transform: translateZ(-80px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateZ(0);
-            transform: translateZ(0);
-    opacity: 1;
-  }
 }
 
 
@@ -108,100 +124,6 @@ color: black;
   font-weight: 600;
   font-size: 40px;
   text-shadow: 1px 1px white;
-  -webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1.5s both;
-        animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1.5s both;
-}
-
-@-webkit-keyframes fade-in-bottom {
-  0% {
-    -webkit-transform: translateY(50px);
-            transform: translateY(50px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes fade-in-bottom {
-  0% {
-    -webkit-transform: translateY(50px);
-            transform: translateY(50px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-
-.homePic{
-  background-image: url('../images/dickens_face.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 250px;
-  border: black solid 5px;
-  border-radius: 10px;
-  -webkit-animation: swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) 3s both;
-	        animation: swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) 3s both;
-}
-
-@-webkit-keyframes swing-in-top-fwd {
-  0% {
-    -webkit-transform: rotateX(-100deg);
-            transform: rotateX(-100deg);
-    -webkit-transform-origin: top;
-            transform-origin: top;
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: rotateX(0deg);
-            transform: rotateX(0deg);
-    -webkit-transform-origin: top;
-            transform-origin: top;
-    opacity: 1;
-  }
-}
-@keyframes swing-in-top-fwd {
-  0% {
-    -webkit-transform: rotateX(-100deg);
-            transform: rotateX(-100deg);
-    -webkit-transform-origin: top;
-            transform-origin: top;
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: rotateX(0deg);
-            transform: rotateX(0deg);
-    -webkit-transform-origin: top;
-            transform-origin: top;
-    opacity: 1;
-  }
-}
-
-.homeWords{
-  margin-bottom: 100px;
-}
-
-.icon {
-  width: 300px;
-  height: 200px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 10px;
-}
-
-.showpage {
-  width: 600px;
-  height: 400px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 10px;
 }
 
 .booky {
@@ -223,41 +145,36 @@ color: black;
 
 }
 
-.literary {
-  border: 2px solid black;
-  margin-bottom: 30px;
-  padding: 30px;
+
+//images
+
+.homePic{
+  background-image: url('../images/dickens_face.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 250px;
+  border: black solid 5px;
   border-radius: 10px;
-  background-color: white;
-  margin-left: -10px;
-  margin-right: -10px;
-    p {
-      margin-bottom: 10px;
-    }
-    h4 {
-      margin-bottom: 15px;
-      font-weight: bold;
-    }
+  &:hover {
+    border: black solid 8px;
+  }
 }
 
-.fail {
-  text-align: center;
-  display: none;
-  z-index: 3;
-
-}
-.show-box {
-  border: 2px solid black;
+.icon {
+  width: 300px;
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 10px;
-  background-color: white;
 }
 
-.button{
-  font-family: 'Playfair Display', serif;
-}
-
-.input{
-  border: 2px solid black;
+.showpage {
+  width: 600px;
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 10px;
 }
 
@@ -265,20 +182,17 @@ color: black;
   border-radius: 10px;
 }
 
-
 .whale {
   width: 10%;
   position: relative;
   right: -100%;
-  top: -400px;
+  top: 10px;
   animation-name: move;
   animation-timing-function: linear;
   animation-duration: 20s;
   animation-delay: 0.01s;
   animation-iteration-count: infinite;
 }
-
-
 
 @keyframes move {
 0% {
@@ -289,7 +203,6 @@ color: black;
   left:100%;
 }
 }
-
 
 .bird {
 	background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells.svg);
