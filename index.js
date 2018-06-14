@@ -13,9 +13,11 @@ const errorHandler = require('./lib/errorHandler');
 
 mongoose.connect(dbURI);
 
-app.use(serveStatic(__dirname + "/dist"));
+
 app.use(bodyParser.json());
 app.use('/api', router);
+
+app.use(serveStatic(__dirname + "/dist"));
 
 app.use(errorHandler);
 
