@@ -36,7 +36,8 @@ Task Management
 -----------------
 * As it was a hackathon, we did not have time to fully comes to grips with Vue.js, and there are many features of the framework we have yet to explore and understand.
 * We also did not have time to fully research APIs and just went with what we could easily find. While we appreciate the Pan Macmillan API, using it obviously limits the books that can be added to titles published by that house (at least, if you want an excerpt!). Fortunately, they do have a comprehensive range of the classics in their catalogue.
-* The Wikipedia API is unfortunately also not comprehensive and does not offer all the entries in the Wikipedia database, so sometimes no place information or book information is returned.
+* Unfortunately, the Google Maps API photo URL is temporary and becomes invalid after a few days, returning an ugly generic image. One option would be to allow the user to update the entry with their own photo URL.
+* The Wikipedia API is unfortunately not comprehensive and does not offer all the entries in the Wikipedia database, so sometimes no place information or book information is returned.
 
 ##Technologies
 --------------

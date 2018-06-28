@@ -70,7 +70,7 @@ export default {
     } else {
       this.place.image = 'https://www.lonelyplanet.com/travel-blog/tip-article/wordpress_uploads/2015/04/London-skyline_CS.jpg'
     }
-      // console.log(image[0].getUrl({'maxWidth': 1000, 'maxHeight': 1000}))
+      console.log(image[0].getUrl({'maxWidth': 1000, 'maxHeight': 1000}))
     }
   },
   components: {
