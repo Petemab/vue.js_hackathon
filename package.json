@@ -17,7 +17,7 @@
     "bulma": "^0.7.1",
     "eslint-plugin-react": "^7.9.1",
     "express": "^4.16.3",
-    "mongoose": "^5.0.17",
+    "mongoose": "^5.7.5",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",
     "serve-static": "^1.13.2",
